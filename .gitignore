@@ -1,0 +1,5 @@
+data/exposure_p5e-8.tsv
+data/raw/
+*.gz
+.Rhistory
+.RData
