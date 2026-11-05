@@ -7,3 +7,4 @@ bash scripts/fetch_exposure.sh
 Rscript R/01_select_instruments.R
 bash scripts/fetch_outcome.sh
 Rscript R/02_run_mr.R
+Rscript R/03_sensitivity_no_hla.R

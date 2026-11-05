@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
+sUwBIK,qHzL4u,Type 1 diabetes (log OR),Serum 25OHD (SD),MR Egger,261.16152580055,136,6.27010192080454e-10
+sUwBIK,qHzL4u,Type 1 diabetes (log OR),Serum 25OHD (SD),Inverse variance weighted,261.55877268655,137,7.95548842133926e-10

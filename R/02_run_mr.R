@@ -7,6 +7,7 @@ suppressMessages({
   library(data.table)
 })
 
+set.seed(2026)  # weighted median uses a bootstrap; fix the seed for reproducibility
 dir.create("results", showWarnings = FALSE)
 
 expo_raw <- fread("data/instruments.tsv")
@@ -51,8 +52,8 @@ fwrite(loo, "results/leave_one_out.csv")
 fwrite(single, "results/single_snp.csv")
 
 ggsave("results/scatter.png", mr_scatter_plot(res, dat)[[1]], width = 7, height = 6, dpi = 150)
-ggsave("results/forest.png", mr_forest_plot(single)[[1]], width = 7, height = 9, dpi = 150)
-ggsave("results/leave_one_out.png", mr_leaveoneout_plot(loo)[[1]], width = 7, height = 9, dpi = 150)
+ggsave("results/forest.png", mr_forest_plot(single)[[1]], width = 8, height = 26, dpi = 150)
+ggsave("results/leave_one_out.png", mr_leaveoneout_plot(loo)[[1]], width = 8, height = 26, dpi = 150)
 ggsave("results/funnel.png", mr_funnel_plot(single)[[1]], width = 7, height = 6, dpi = 150)
 
 print(res[, c("method", "nsnp", "b", "se", "pval", "or", "or_lci95", "or_uci95")])
