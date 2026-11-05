@@ -90,7 +90,20 @@ Rscript R/02_run_mr.R                 # estimators, sensitivity analyses, figure
 
 ### Results
 
-Results are written to `results/`. See the Changelog for the run that produced the files committed here.
+Run of November 4, 2026 (140 instruments; OR per 1 SD of serum 25OHD):
+
+| Method | SNPs | OR (95% CI) | p |
+|--------|------|-------------|---|
+| Inverse variance weighted | 140 | 0.993 (0.762 to 1.292) | 0.956 |
+| Weighted median | 140 | 0.921 (0.767 to 1.105) | 0.375 |
+| MR-Egger | 140 | 0.904 (0.611 to 1.337) | 0.613 |
+
+- Cochran's Q (IVW): 760.1, 139 df, p = 2.7e-86
+- Egger intercept: 0.0034 (SE 0.0054), p = 0.525
+
+The IVW estimate is not statistically significant, and the three methods give point estimates on the same side of 1 with overlapping intervals. Heterogeneity between instruments is large, so these results do not support a causal claim either way.
+
+Full outputs are in `results/`.
 
 ---
 
@@ -152,6 +165,7 @@ mr-vitamin-d-type1-diabetes/
 
 ### Version 1.0.0 (November 4, 2026)
 
+- First full run executed on November 4, 2026; results committed in `results/`
 - Initial release: instrument selection, IVW, weighted median, MR-Egger, heterogeneity, intercept, leave-one-out, single-variant analyses and plots
 
 ---
