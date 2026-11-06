@@ -6,7 +6,9 @@
 ## Two-sample Mendelian randomization of serum 25-hydroxyvitamin D on type 1 diabetes, from public GWAS summary statistics
 
 **Version:** 1.0.0
+
 **Release Date:** November 5, 2026
+
 **R:** 4.5 or later (developed on 4.5.3, TwoSampleMR 0.7.12)
 
 ---
@@ -164,11 +166,13 @@ mr-vitamin-d-type1-diabetes/
 ### The type 1 diabetes download is very slow
 
 **Cause:** the GWAS Catalog FTP serves large files at a few hundred kilobytes per second at busy times, and range requests into the file are not usable because it is a plain gzip, not an indexed one.
+
 **Solution:** leave `scripts/fetch_outcome.sh` running; `curl -C -` resumes from the bytes already on disk.
 
 ### Rscript fails to start on Windows with a conda-installed R
 
 **Cause:** the conda environment's `Library/bin` and `lib/R/bin/x64` folders are not on `PATH`.
+
 **Solution:** prepend both folders to `PATH` before calling `Rscript`.
 
 ---
@@ -187,6 +191,7 @@ mr-vitamin-d-type1-diabetes/
 ## Support
 
 - **Issues:** open an issue in this repository's GitHub issue tracker
+
 - **Contact:** see the Author section
 
 ---
@@ -212,7 +217,9 @@ mr-vitamin-d-type1-diabetes/
 ## Author
 
 **Tchicdje Kouojip Joram Smith (DeltaGa)**
+
 Email: dev.github.tkjoramsmith@outlook.com
+
 GitHub: [https://github.com/DeltaGa](https://github.com/DeltaGa)
 
 ---
